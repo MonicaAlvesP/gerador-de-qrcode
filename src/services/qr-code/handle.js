@@ -2,7 +2,7 @@ import QR from "qrcode-terminal";
 import chalk from "chalk";
 
 
-async function handleQRCode(err, result) {
+async function handle(err, result) {
   if (err) {
     console.error("Erro na aplicação", err);
     return;
@@ -14,4 +14,4 @@ async function handleQRCode(err, result) {
   });
 }
 
-export default handleQRCode;
+export default handle;
