@@ -1,29 +1,56 @@
-## 💻 Sobre o Projeto
+# 🔧 Gerador de QR Code & Senhas
 
-Vamos criar um kit de utilidades para um e-commerce, o porjeto deve ser escalável para ter adição de novas features.
+Kit de utilidades escalável para e-commerce com geração de QR Codes e senhas seguras.
 
-## 📋 Pré-requisitos
+## 🚀 Instalação
 
-Antes de ingressar neste conteúdo, é necessário possuir conhecimento prévio nas seguintes áreas:
+```bash
+npm install
+npm start
+```
 
-- Lógica de programação
-- JavaScript | Básico
-- Node.js | Básico
-- Node Modules
-- NPM Package Dependencies
-- Váriaveis de Ambiente (.env)
+## ⚙️ Configuração
 
-## 📚 Habilidade e Sub-habilidades que vamos aprender neste conteúdo
+Edite o arquivo `.env`:
 
-- Como gerar qrcode com node
-- Como lidar com várias dependências de um projeto
-- Como pensar em projetos por camadas
+```env
+UPPERCASE_LETTERS=false
+LOWERCASE_LETTERS=true
+NUMBERS=true
+SPECIAL_CHARACTERS=true
+PASSWORD_LENGTH=8
+```
 
-## 📊 Objetivos e Resultados Esperados
+## 📋 Funcionalidades
 
-pós a conclusão do curso/projeto, os estudantes estarão aptos a:
+- **QR Code Generator**: Gera QR codes para links (normal ou terminal)
+- **Password Generator**: Cria senhas personalizáveis baseadas nas configurações
 
-- Criar projetos nodejs que gerem multiplas dependências
-- Criar projetos nodejs que gerem qrcodes
-- Criar projetos nodejs que gerem multiplas camadas
+## 🏗️ Arquitetura
 
+```
+src/
+├── services/          # Lógica de negócio
+│   ├── qr-code/      # Geração de QR codes
+│   └── password/     # Geração de senhas
+├── schemas/          # Validação de entrada
+└── index.js          # Ponto de entrada
+```
+
+## 🛠️ Tecnologias
+
+- Node.js (ES Modules)
+- qrcode-terminal
+- chalk
+- dotenv
+- prompt
+
+## 📦 Extensibilidade
+
+Para adicionar novos serviços, crie uma pasta em `services/` com:
+- `create.js` - Interface
+- `handle.js` - Lógica principal
+- `utils/` - Funções auxiliares
+
+## 🤝 Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
