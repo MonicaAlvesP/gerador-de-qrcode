@@ -1,4 +1,4 @@
-import { permittedCharacters } from "./permittedCharacters.js"
+import { permittedCharacters } from "./utils/permittedCharacters,js"
 
 async function handle() {
   let characters = []

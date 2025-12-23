@@ -1,7 +1,6 @@
 import QR from "qrcode-terminal";
 import chalk from "chalk";
 
-
 async function handle(err, result) {
   if (err) {
     console.error("Erro na aplicação", err);

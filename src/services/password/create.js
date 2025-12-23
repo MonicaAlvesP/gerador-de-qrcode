@@ -1,5 +1,4 @@
 import handle from "./handle.js";
-
 import chalk from "chalk";
 
 async function createPassword() {
